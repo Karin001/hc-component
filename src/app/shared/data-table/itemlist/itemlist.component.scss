@@ -1,0 +1,33 @@
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+.table-container{
+ display: flex;
+ flex: 1;
+  .datatable{
+    flex: 1;
+   
+    
+
+  }
+
+}
+app-function{
+ 
+}
+
+.detail,app-detail{
+  position: fixed;
+  margin-right: 30px;
+  width: 500px;
+  right: 0;
+  top: 300px;
+
+}
+.find{
+  position: fixed;
+  margin-right: 30px;
+  width: 500px;
+  right: 0;
+  top: 600px;
+}

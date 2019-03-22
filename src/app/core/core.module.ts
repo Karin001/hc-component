@@ -14,7 +14,7 @@ import { MockInterceptor } from './interceptors/mock-response.interceptor';
   providers:[
     startUpProvider,
     { provide: HTTP_INTERCEPTORS, useClass: ErrorHandleInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: MockInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: MockInterceptor, multi: true }
   ]
 })
 export class CoreModule { }

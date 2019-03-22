@@ -303,6 +303,11 @@
     semver "5.6.0"
     semver-intersect "1.4.0"
 
+"@swimlane/ngx-datatable@^14.0.0":
+  version "14.0.0"
+  resolved "http://registry.npm.taobao.org/@swimlane/ngx-datatable/download/@swimlane/ngx-datatable-14.0.0.tgz#6227625e2ce2e9143735d4deeb3ab34b88745c26"
+  integrity sha1-YidiXizi6RQ3NdTe6zqzS4h0XCY=
+
 "@types/jasmine@*":
   version "3.3.9"
   resolved "http://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-3.3.9.tgz#ee886a9113db567e722a8a0c37f0e6283f2cefa3"

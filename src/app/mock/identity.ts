@@ -5,7 +5,7 @@ import { IdentityResType } from '../core/start-up';
 const identityMock:IdentityResType = {
     success: true,
     payload: {
-       staffName:'朱希文',
+       staffName:'yink',
        staffId:'123123d3',
        identity:'admin'
     }

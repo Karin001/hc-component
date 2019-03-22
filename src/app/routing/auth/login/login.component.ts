@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   };
   constructor(private loginService: LoginService,
     private snk: MatSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -34,6 +35,7 @@ export class LoginComponent implements OnInit {
 
       .subscribe(res => {
         this.loginPending = false;
+        this.router.navigateByUrl('/project')
         // if (!res.success) {
         //   this.snk.open(res.errorHint, null, {
         //     duration: 2000

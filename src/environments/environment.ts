@@ -18,7 +18,9 @@ export const environment = {
 
   },
   auth_status:{
-    admin:'HR',
+    admin:'admin',
+    keeper:'keeper',
+    engineer:' engineer',
     visitor:'visitor',
     member:'member',
     lockUser:'lockUser',
@@ -37,64 +39,57 @@ export const environment = {
             name:'新增一个项目',
             url:'/project/new',
             icon:'add',
-          },
-          {
-            name:'查看当前项目日历',
-            url:'/project/calendar',
-            icon:'add',
-            disabled:true
-          },
-          {
-            name:'查看当前项目重要事件',
-            url:'/project/mip',
-            icon:'add',
-            disabled:true
-          },
-          {
-            name:'查看当前项目员工信息',
-            url:'/project/staff',
-            icon:'add',
-            disabled:true
           }
         ]
       },
       {
-        name:'人员管理',
+        name:'库存管理',
         children:[
           {
-            name:'查看所有人员',
+            name:'查看所有库存',
             icon:'face',
-            url:'/people/all'
-          }
+            url:'/storehouse/all'
+          },
+          {
+            name:'批量导入',
+            icon:'face',
+            url:'/storehouse/import'
+          },
+        ]
+      },   
+      {
+        name:'供应商',
+        children:[
+          {
+            name:'查看所有供应商',
+            icon:'face',
+            url:'/storehouse/all'
+          },
+          {
+            name:'新增供应商',
+            icon:'face',
+            url:'/storehouse/import'
+          },
+        ]
+      },
+      {
+        name:'订单管理',
+        children:[
+          {
+            name:'查看所有订单',
+            icon:'face',
+            url:'/storehouse/all'
+          },
+          {
+            name:'下单',
+            icon:'face',
+            url:'/storehouse/import'
+          },
         ]
       }
     ],
     member:[
-      {
-        name:'项目管理',
-        children:[
-          {
-            name:'查看所有项目',
-            url:'/project/all',
-            icon:'folder'
-          },
-          {
-            name:'新增一个项目',
-            url:'/project/new',
-            icon:'add'
-          }
-        ]
-      },
-      {
-        name:'人员管理',
-        children:[
-          {
-            name:'查看所有人员',
-            icon:'face',
-            url:'/people/all'
-          }
-        ]
-      }
+      
     ]
   },
   errorHandle:{

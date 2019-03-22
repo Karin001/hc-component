@@ -18,6 +18,8 @@ import { MatCardModule,
   MatChipsModule
   } from '@angular/material';
 import { RouterModule } from '@angular/router';
+
+import { DataTableModule } from './data-table/data-table.module';
 const materialModules = [
   MatCardModule,
   MatButtonModule,
@@ -40,11 +42,13 @@ const materialModules = [
   declarations: [],
   imports: [
     RouterModule,
+    DataTableModule,
     ...materialModules,
   ],
   exports:[
     ...materialModules,
-    RouterModule
+    RouterModule,
+    DataTableModule
   ]
 })
 export class SharedModule { }
