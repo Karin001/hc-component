@@ -32,7 +32,7 @@ export const environment = {
         children:[
           {
             name:'查看所有项目',
-            url:'/member',
+            url:'/project/projectlist',
             icon:'folder'
           },
           {
