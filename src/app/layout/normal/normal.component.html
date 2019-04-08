@@ -8,6 +8,16 @@
     <div class="menu-title">
       华川电子元件管理
     </div>
+    <div class="tool">
+      <button mat-button [matMenuTriggerFor]="menu1">
+        <mat-icon>person</mat-icon>
+      <span>工具箱</span>
+    </button>
+    <mat-menu #menu1="matMenu">
+      <button mat-menu-item [routerLink]="[ '/project/add-bom']">新增元件</button>
+    </mat-menu>
+    
+    </div>
     <div class="menu">
     
       <button mat-button [matMenuTriggerFor]="menu">

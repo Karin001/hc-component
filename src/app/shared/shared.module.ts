@@ -15,11 +15,13 @@ import { MatCardModule,
   MatNativeDateModule,
   MatTabsModule,
   MatExpansionModule,
-  MatChipsModule
+  MatChipsModule,
+  MatStepperModule
   } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
 import { DataTableModule } from './data-table/data-table.module';
+import { BomFormModule } from './bom-form/bom-form.module';
 const materialModules = [
   MatCardModule,
   MatButtonModule,
@@ -36,19 +38,22 @@ const materialModules = [
   MatNativeDateModule,
   MatTabsModule,
   MatExpansionModule,
-  MatChipsModule
+  MatChipsModule,
+  MatStepperModule
 ]
 @NgModule({
   declarations: [],
   imports: [
     RouterModule,
     DataTableModule,
+    BomFormModule,
     ...materialModules,
   ],
   exports:[
     ...materialModules,
     RouterModule,
-    DataTableModule
+    DataTableModule,
+    BomFormModule
   ]
 })
 export class SharedModule { }
