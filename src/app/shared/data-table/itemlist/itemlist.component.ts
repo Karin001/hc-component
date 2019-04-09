@@ -27,7 +27,10 @@ export class ItemlistComponent implements OnInit {
   
   ) {
     this.fetch((data) => {
-      this.rows = data;
+      if(!this.rows){
+        this.rows = data;
+      }
+      
     });
     // this.restapi.stream_allItem().subscribe((data) => {
     //   if (data['code'] === 'not_logIn') {

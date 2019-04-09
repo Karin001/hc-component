@@ -1,36 +1,39 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+<button mat-raised-button (click)="addBom()">
+  增加一个bom
 </button>
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup" label="填写表单">
     <mat-accordion>
-      <mat-expansion-panel *ngFor="let bom of boms">
+      <mat-expansion-panel *ngFor="let bom of boms; let i = index" expanded>
         <mat-expansion-panel-header>
-          {{bom.marking}}
+          <div  class="panel-header">
+              <button mat-icon-button (click)="delete($event,i)">
+                  <mat-icon>delete_outline</mat-icon>
+                </button>
+              <span>
+                  {{bom.value.valid==='VALID'?bom.value.marking:'请完善表单'}}
+              </span>
+              
+          </div>
+            
         </mat-expansion-panel-header>
         <div>
-            <app-add-bom-form></app-add-bom-form>
+            <app-add-bom-form (bomValid)=onStatusChange($event,i)></app-add-bom-form>
           
         </div>
       </mat-expansion-panel>
      
     </mat-accordion>
     <div>
-      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperNext [disabled]="!checkValid">Next</button>
     </div>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup" label="审查元素">
+      <app-itemlist [columns]="tableColumns" [rows]="tableRows"></app-itemlist>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperNext>确认添加以上bom</button>
     </div>
   </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
+  
 </mat-horizontal-stepper>

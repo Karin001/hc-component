@@ -1,12 +1,12 @@
 <div class="div" [formGroup]="bomGroup">
   <mat-form-field>
-    <input matInput placeholder="名称" formControlName="name">
+    <input matInput placeholder="名称(必填)" formControlName="name">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="型号" formControlName="marking">
+    <input matInput placeholder="型号(必填)" formControlName="marking">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="封装" formControlName="footprint">
+    <input matInput placeholder="封装(必填)" formControlName="footprint">
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="值" formControlName="value">
@@ -18,7 +18,7 @@
     <input matInput placeholder="精度" formControlName="precision">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="数量" formControlName="quantity">
+    <input matInput placeholder="数量(必填)" formControlName="quantity">
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="描述" formControlName="description">
@@ -27,6 +27,6 @@
     <input matInput placeholder="标签" formControlName="tag">
   </mat-form-field>
   <mat-form-field>
-      <input matInput placeholder="标签" formControlName="manufacturer">
+      <input matInput placeholder="制造商" formControlName="manufacturer">
     </mat-form-field>
 </div>
